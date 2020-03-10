@@ -10,10 +10,6 @@ public class Printer {
         this.book = book;
     }
 
-    /**
-     * Prints all pages
-     * @return String that contains all pages and their number
-     */
     public String printAllPages() {
         StringBuilder allPages = new StringBuilder();
         for(Map.Entry<Integer, String> page : book.getPages().entrySet()) {
@@ -22,24 +18,14 @@ public class Printer {
         return allPages.toString();
     }
 
-    /**
-     * Get current page content
-     * @return String that contains current page content
-     */
     public String getCurrentPageContents() {
         return book.getPages().get(currentPage);
     }
 
-    /**
-     * Switch to next page
-     */
     public void turnPage() {
         currentPage ++;
     }
-
-    /**
-     * Prints the current page.
-     */
+    
     public void printCurrentPage() {
         System.out.println(book.getPages().get(currentPage));
     }
